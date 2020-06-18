@@ -1,0 +1,28 @@
+### Employing Linear Regression
+
+ We estimate
+$\beta_0$ and $\beta_1$ by minimizing the sum of the squared errors:
+$$
+\sum_{j=1}^n (y_j - \beta_0 - \beta_1 x_j)^2.$$
+
+By differentiating t with respect to $\beta_0$ and $\beta_1$, we get
+the normal equations:
+$$\beta_0 +  \overline x \beta_1 =\overline y$$
+$$ \overline x \beta_0 + \overline{x^2} \beta_1 = \overline{xy}$$
+Solving these equations, we get $$\hat \beta_1 = \frac{\overline
+{xy} - \bar x \bar y}{\overline {x^2} - (\bar x)^2}=
+\frac{S_{xy}}{S_{xx}},$$ where  $S_{xy} = n(\overline{xy}
+-\bar{x}\bar{y})$ and
+$$\hat \beta_0 = \overline y - \overline x
+\frac{S_{xy}}{S_{xx}}.$$
+
+
+```python
+import statsmodels.api as sm
+
+```
+
+
+```python
+
+```
